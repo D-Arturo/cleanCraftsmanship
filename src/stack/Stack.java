@@ -9,6 +9,7 @@ public class Stack {
     }
 
     public void pop() {
+        setEmpty(true);
     }
 
     public boolean isEmpty() {
