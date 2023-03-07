@@ -20,4 +20,11 @@ public class StackTest {
         stack.push(1);
         assertFalse(stack.isEmpty());
     }
+
+    @Test
+    public void afterOnePushAndOnePop_isEmpty() throws Exception {
+        stack.push(1);
+        stack.pop();
+        assertTrue(stack.isEmpty());
+    }
 }
