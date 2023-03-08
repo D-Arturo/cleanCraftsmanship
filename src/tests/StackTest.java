@@ -45,5 +45,8 @@ public class StackTest {
         assertFalse(stack.isEmpty());
     }
 
-
+    @Test
+    public void poppingEmptyStack_throwsUnderflowException() throws Exception {
+        assertThrows(Stack.Underflow.class, () -> stack.pop());
+    }
 }
