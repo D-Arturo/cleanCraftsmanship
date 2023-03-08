@@ -9,6 +9,8 @@ public class StackTest {
 
     public static final int EXPECTED_SIZE_TWO = 2;
     public static final int EXPECTED_SIZE_ONE = 1;
+    public static final int FIRST_ELEMENT = 1;
+    public static final int SECOND_ELEMENT = 5;
     private final Stack stack = new Stack();
 
     @Test
@@ -54,5 +56,20 @@ public class StackTest {
     public void afterPushingNewElement_willPopThatSameElement() throws Exception {
         stack.push(5);
         assertEquals(5, stack.pop());
+    }
+
+    @Test
+    public void afterPushingTwoElements_willPopLastElement() throws Exception {
+        stack.push(1);
+        stack.push(5);
+        assertEquals(5, stack.pop());
+    }
+
+    @Test
+    public void afterTwoPushesAndTwoPops_willPopFirstElementPushed() throws Exception {
+        stack.push(FIRST_ELEMENT);
+        stack.push(SECOND_ELEMENT);
+        stack.pop();
+        assertEquals(FIRST_ELEMENT, stack.pop());
     }
 }
