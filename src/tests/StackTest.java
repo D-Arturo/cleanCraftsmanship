@@ -44,4 +44,12 @@ public class StackTest {
         assertEquals(EXPECTED_SIZE_ONE, stack.size());
     }
 
+    @Test
+    public void afterTwoPushesAndOnePop_isNotEmpty() throws Exception {
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+        assertFalse(stack.isEmpty());
+    }
+
 }
