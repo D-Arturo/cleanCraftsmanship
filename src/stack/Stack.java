@@ -12,8 +12,8 @@ public class Stack {
     }
 
     public void pop() {
-        setEmpty(true);
         downOneSize();
+        if (isEmpty()) setEmpty(true);
     }
 
     private void downOneSize() {
@@ -25,6 +25,7 @@ public class Stack {
     }
 
     public boolean isEmpty() {
+        isEmpty = size() <= 0;
         return isEmpty;
     }
 
