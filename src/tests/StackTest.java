@@ -66,10 +66,10 @@ public class StackTest {
     }
 
     @Test
-    public void afterTwoPushesAndTwoPops_willPopFirstElementPushed() throws Exception {
+    public void afterTwoPushes_willPopSecondElementPushedThenFirstElement() throws Exception {
         stack.push(FIRST_ELEMENT);
         stack.push(SECOND_ELEMENT);
-        stack.pop();
+        assertEquals(SECOND_ELEMENT, stack.pop());
         assertEquals(FIRST_ELEMENT, stack.pop());
     }
 }
