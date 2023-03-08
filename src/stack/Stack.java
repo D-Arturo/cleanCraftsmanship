@@ -12,6 +12,7 @@ public class Stack {
     }
 
     public void pop() {
+        if (isEmpty()) throw new Underflow();
         downOneSize();
         if (isEmpty()) setEmpty(true);
     }
@@ -25,7 +26,7 @@ public class Stack {
     }
 
     public boolean isEmpty() {
-       return isEmpty = size() == 0;
+        return isEmpty = size() == 0;
     }
 
     public void setEmpty(boolean empty) {
@@ -34,5 +35,8 @@ public class Stack {
 
     public int size() {
         return actualSize;
+    }
+
+    public class Underflow extends RuntimeException {
     }
 }
