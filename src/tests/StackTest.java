@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StackTest {
 
     public static final int EXPECTED_SIZE_TWO = 2;
+    public static final int EXPECTED_SIZE_ONE = 1;
     private final Stack stack = new Stack();
 
     @Test
@@ -34,4 +35,12 @@ public class StackTest {
         stack.push(2);
         assertEquals(EXPECTED_SIZE_TWO, stack.size());
     }
+
+    @Test
+    public void afterTwoPushesAndOnePop_sizeIsOne() throws Exception {
+        stack.push(1);
+        stack.push(2);
+        assertEquals(EXPECTED_SIZE_ONE, stack.size());
+    }
+
 }

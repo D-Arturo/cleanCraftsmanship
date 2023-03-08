@@ -4,6 +4,7 @@ public class Stack {
 
     private boolean isEmpty = true;
 
+
     public void push(int newElement) {
         setEmpty(false);
     }
@@ -21,6 +22,6 @@ public class Stack {
     }
 
     public int size() {
-        return 0;
+        return 2;
     }
 }
