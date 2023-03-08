@@ -19,4 +19,8 @@ public class Stack {
     public void setEmpty(boolean empty) {
         isEmpty = empty;
     }
+
+    public int size() {
+        return 0;
+    }
 }
