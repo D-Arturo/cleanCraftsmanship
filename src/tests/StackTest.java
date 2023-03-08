@@ -49,4 +49,10 @@ public class StackTest {
     public void poppingEmptyStack_throwsUnderflowException() throws Exception {
         assertThrows(Stack.Underflow.class, () -> stack.pop());
     }
+
+    @Test
+    public void afterPushingNewElement_willPopThatSameElement() throws Exception {
+        stack.push(5);
+        assertEquals(5, stack.pop());
+    }
 }
