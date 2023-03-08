@@ -40,6 +40,7 @@ public class StackTest {
     public void afterTwoPushesAndOnePop_sizeIsOne() throws Exception {
         stack.push(1);
         stack.push(2);
+        stack.pop();
         assertEquals(EXPECTED_SIZE_ONE, stack.size());
     }
 

@@ -3,14 +3,25 @@ package stack;
 public class Stack {
 
     private boolean isEmpty = true;
+    private int actualSize = 0;
 
 
     public void push(int newElement) {
         setEmpty(false);
+        addOneSize();
     }
 
     public void pop() {
         setEmpty(true);
+        downOneSize();
+    }
+
+    private void downOneSize() {
+        actualSize--;
+    }
+
+    private void addOneSize() {
+        actualSize++;
     }
 
     public boolean isEmpty() {
@@ -22,6 +33,6 @@ public class Stack {
     }
 
     public int size() {
-        return 2;
+        return actualSize;
     }
 }
