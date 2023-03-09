@@ -1,4 +1,4 @@
-package tests;
+package tests.stack;
 
 import org.junit.jupiter.api.Test;
 import stack.Stack;
@@ -66,7 +66,7 @@ public class StackTest {
     }
 
     @Test
-    public void afterTwoPushes_willPopSecondElementPushedThenFirstElement() throws Exception {
+    public void afterTwoPushesAndTwoPops_willPopSecondElementPushedThenFirstElement() throws Exception {
         stack.push(FIRST_ELEMENT);
         stack.push(SECOND_ELEMENT);
         assertEquals(SECOND_ELEMENT, stack.pop());
