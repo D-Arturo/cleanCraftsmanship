@@ -10,21 +10,21 @@ public class Stack {
     public void push(int newElement) {
         setEmpty(false);
         currentValue[size()] = newElement;
-        addOneSize();
+        increaseStackSizeByOne();
     }
 
     public int pop() {
         if (isEmpty()) throw new Underflow();
         if (isEmpty()) setEmpty(true);
-        downOneSize();
+        decreaseSizeByOne();
         return currentValue[size()];
     }
 
-    private void downOneSize() {
+    private void decreaseSizeByOne() {
         actualSize--;
     }
 
-    private void addOneSize() {
+    private void increaseStackSizeByOne() {
         actualSize++;
     }
 
