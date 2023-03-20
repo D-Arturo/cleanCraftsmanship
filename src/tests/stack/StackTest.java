@@ -75,7 +75,7 @@ public class StackTest {
 
     @Test
     public void pushingThreeTimes_throwsOverflowException() throws Exception {
-        assertThrows(Stack.Underflow.class, () -> {
+        assertThrows(Stack.Overflow.class, () -> {
             stack.push(1);
             stack.push(2);
             stack.push(3);

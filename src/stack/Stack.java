@@ -9,6 +9,7 @@ public class Stack {
 
     public void push(int newElement) {
         setEmpty(false);
+        if (size() + 1 >= 3) throw new Overflow();
         currentValue[size()] = newElement;
         increaseStackSizeByOne();
     }
@@ -41,5 +42,9 @@ public class Stack {
     }
 
     public class Underflow extends RuntimeException {
+    }
+
+    public class Overflow extends RuntimeException {
+
     }
 }
