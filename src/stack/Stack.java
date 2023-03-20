@@ -2,7 +2,6 @@ package stack;
 
 public class Stack {
 
-    private final boolean isEmpty = true;
     private int actualSize = 0;
     private final int[] currentValue = new int[2];
 
