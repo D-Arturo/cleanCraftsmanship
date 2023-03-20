@@ -72,4 +72,13 @@ public class StackTest {
         assertEquals(SECOND_ELEMENT, stack.pop());
         assertEquals(FIRST_ELEMENT, stack.pop());
     }
+
+    @Test
+    public void pushingThreeTimes_throwsOverflowException() throws Exception {
+        assertThrows(Stack.Underflow.class, () -> {
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+        });
+    }
 }
