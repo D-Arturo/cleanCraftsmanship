@@ -12,4 +12,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertEquals(0, calculator.add(""));
     }
+
+    @Test
+    public void shouldReturnFour_whenFourStringPassed() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(4, calculator.add("4"));
+    }
 }
