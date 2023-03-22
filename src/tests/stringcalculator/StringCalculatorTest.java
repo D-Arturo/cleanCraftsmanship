@@ -20,6 +20,13 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void shouldReturnTheNumberReceived_whenSingleNumberStringReceived() {
+        assertEquals(5, calculator.add("5"));
+        assertEquals(6, calculator.add("6"));
+        assertEquals(7, calculator.add("7"));
+    }
+
+    @Test
     public void shouldReturnThree_whenOneCommaTwoStringReceived() {
         assertEquals(4, calculator.add("1,2"));
     }
