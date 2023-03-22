@@ -4,13 +4,21 @@ import static java.lang.Integer.parseInt;
 
 public class StringCalculator {
     public int add(String stringReceived) {
-        if (stringReceived.equals("")) return 0;
+        if (isEmptyString(stringReceived)) return 0;
         String[] numbers = stringReceived.split(",");
-        if (numbers.length == 1) return parseInt(stringReceived);
+        if (isSingleNumber(numbers)) return parseInt(stringReceived);
         int result = 0;
         for (String number : numbers) {
             result = result + parseInt(number);
         }
         return result;
+    }
+
+    private boolean isSingleNumber(String[] numbers) {
+        return numbers.length == 1;
+    }
+
+    private boolean isEmptyString(String stringReceived) {
+        return stringReceived.equals("");
     }
 }
