@@ -7,15 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringCalculatorTest {
 
+    private final StringCalculator calculator = new StringCalculator();
+
     @Test
-    public void shouldReturnZero_whenEmptyStringPassed() {
-        StringCalculator calculator = new StringCalculator();
+    public void shouldReturnZero_whenEmptyStringReceived() {
         assertEquals(0, calculator.add(""));
     }
 
     @Test
-    public void shouldReturnFour_whenFourStringPassed() {
-        StringCalculator calculator = new StringCalculator();
+    public void shouldReturnFour_whenFourStringReceived() {
         assertEquals(4, calculator.add("4"));
+    }
+
+    @Test
+    public void shouldReturnThree_whenOneCommaTwoStringReceived() {
+        assertEquals(4, calculator.add("1,2"));
     }
 }
