@@ -8,7 +8,7 @@ public class StringCalculator {
     public int add(String stringReceived) {
         if (isEmptyString(stringReceived)) return 0;
         String[] numbers = stringReceived.split(",");
-        if (isSingleNumber(numbers)) return parseInt(stringReceived);
+//        if (isSingleNumber(numbers)) return parseInt(stringReceived);
         return Arrays.stream(numbers).mapToInt(value -> parseInt(value)).sum();
 //        int result = 0;
 //        for (String number : numbers) {
@@ -16,10 +16,10 @@ public class StringCalculator {
 //        }
 //        return result;
     }
-
-    private boolean isSingleNumber(String[] numbers) {
-        return numbers.length == 1;
-    }
+//
+//    private boolean isSingleNumber(String[] numbers) {
+//        return numbers.length == 1;
+//    }
 
     private boolean isEmptyString(String stringReceived) {
         return stringReceived.equals("");
