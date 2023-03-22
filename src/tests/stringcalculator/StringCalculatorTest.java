@@ -28,6 +28,6 @@ public class StringCalculatorTest {
 
     @Test
     public void shouldReturnThree_whenOneCommaTwoStringReceived() {
-        assertEquals(4, calculator.add("1,2"));
+        assertEquals(3, calculator.add("1,2"));
     }
 }
