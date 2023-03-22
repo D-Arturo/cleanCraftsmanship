@@ -27,7 +27,10 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void shouldReturnThree_whenOneCommaTwoStringReceived() {
+    public void shouldReturnTheSUm_whenCommaSeparatedNumberStringReceived() {
         assertEquals(3, calculator.add("1,2"));
+        assertEquals(15, calculator.add("6,9"));
+        assertEquals(25, calculator.add("16,9"));
+        assertEquals(45, calculator.add("1,2,3,4,5,6,7,8,9"));
     }
 }
