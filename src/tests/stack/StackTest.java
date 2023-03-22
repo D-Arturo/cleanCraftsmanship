@@ -1,7 +1,7 @@
 package tests.stack;
 
+import main.stack.Stack;
 import org.junit.jupiter.api.Test;
-import stack.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
 
