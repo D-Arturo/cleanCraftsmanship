@@ -7,7 +7,7 @@ import static java.lang.Integer.parseInt;
 public class StringCalculator {
     public int add(String stringReceived) {
         if (isEmptyString(stringReceived)) return 0;
-        String[] numbers = stringReceived.split(",");
+        String[] numbers = stringReceived.split(",|\n");
 //        if (isSingleNumber(numbers)) return parseInt(stringReceived);
         return Arrays.stream(numbers).mapToInt(value -> parseInt(value)).sum();
 //        int result = 0;
