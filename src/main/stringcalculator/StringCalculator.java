@@ -1,5 +1,7 @@
 package main.stringcalculator;
 
+import java.util.Arrays;
+
 import static java.lang.Integer.parseInt;
 
 public class StringCalculator {
@@ -7,11 +9,12 @@ public class StringCalculator {
         if (isEmptyString(stringReceived)) return 0;
         String[] numbers = stringReceived.split(",");
         if (isSingleNumber(numbers)) return parseInt(stringReceived);
-        int result = 0;
-        for (String number : numbers) {
-            result = result + parseInt(number);
-        }
-        return result;
+        return Arrays.stream(numbers).mapToInt(value -> parseInt(value)).sum();
+//        int result = 0;
+//        for (String number : numbers) {
+//            result = result + parseInt(number);
+//        }
+//        return result;
     }
 
     private boolean isSingleNumber(String[] numbers) {
