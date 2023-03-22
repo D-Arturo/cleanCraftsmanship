@@ -33,4 +33,9 @@ public class StringCalculatorTest {
         assertEquals(25, calculator.add("16,9"));
         assertEquals(45, calculator.add("1,2,3,4,5,6,7,8,9"));
     }
+
+    @Test
+    public void shouldReturnTheSUm_whenStringReceivedUsesCommaOrNewLineSeparator() {
+        assertEquals(6, calculator.add("1\n2,3"));
+    }
 }
