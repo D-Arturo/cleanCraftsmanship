@@ -12,6 +12,6 @@ class RomanConverterTest {
         assertEquals(1, RomanConverter.convertToArabic("I"));
         assertEquals(2, RomanConverter.convertToArabic("II"));
         assertEquals(3, RomanConverter.convertToArabic("III"));
-        assertEquals(4, RomanConverter.convertToArabic("VI"));
+        assertEquals(5, RomanConverter.convertToArabic("V"));
     }
 }

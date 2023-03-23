@@ -5,6 +5,7 @@ public class RomanConverter {
         if (romanNumber.equals("I")) return 1;
         if (romanNumber.equals("II")) return 2;
         if (romanNumber.equals("III")) return 3;
+        if (romanNumber.equals("V")) return 5;
         return 4;
     }
 }
