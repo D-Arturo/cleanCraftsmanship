@@ -16,6 +16,8 @@ public class RomanConverter {
             }
         }
 
+        if (romanNumber.contains("IV")) result -= 2;
+
         return result;
     }
 
