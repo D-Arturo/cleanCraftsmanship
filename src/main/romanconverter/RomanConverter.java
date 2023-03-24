@@ -12,7 +12,7 @@ public class RomanConverter {
 //                result += Numeral.FIVE.arabic;
 //            }
             for (Numeral numeral : Numeral.values()) {
-                if (romanNumber.charAt(i) == numeral.roman) result += numeral.arabic;
+                if (String.valueOf(romanNumber.charAt(i)).equals(numeral.roman)) result += numeral.arabic;
             }
         }
 
@@ -20,13 +20,14 @@ public class RomanConverter {
     }
 
     private enum Numeral {
-        ONE(1, 'I'),
-        FIVE(5, 'V');
+        ONE(1, "I"),
+        FOUR(4, "IV"),
+        FIVE(5, "V");
 
         public final int arabic;
-        public final char roman;
+        public final String roman;
 
-        Numeral(int arabic, char roman) {
+        Numeral(int arabic, String roman) {
             this.arabic = arabic;
             this.roman = roman;
         }
