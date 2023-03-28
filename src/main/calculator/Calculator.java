@@ -10,6 +10,9 @@ public class Calculator {
             for (; number % 2 == 0 && number / 2 != 1; number /= 2) {
                 primeFactors.add(2);
             }
+            for (; number % 3 == 0 && number / 3 != 1; number /= 3) {
+                primeFactors.add(3);
+            }
             if (number > 1)
                 primeFactors.add(number);
         }
