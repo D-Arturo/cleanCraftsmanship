@@ -11,9 +11,12 @@ public class Calculator {
                 primeFactors.add(2);
                 number /= 2;
             }
+            if (number % 2 == 0 && number / 2 != 1) {
+                primeFactors.add(2);
+                number /= 2;
+            }
             if (number > 1)
                 primeFactors.add(number);
-
         }
         return primeFactors;
     }
