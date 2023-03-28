@@ -18,5 +18,7 @@ public class CalculatorTest {
         assertEquals(new ArrayList<>(List.of(2, 2)), primeFactorsOf(4));
         assertEquals(new ArrayList<>(List.of(5)), primeFactorsOf(5));
         assertEquals(new ArrayList<>(List.of(2, 3)), primeFactorsOf(6));
+        assertEquals(new ArrayList<>(List.of(7)), primeFactorsOf(7));
+        assertEquals(new ArrayList<>(List.of(2, 2, 2)), primeFactorsOf(8));
     }
 }

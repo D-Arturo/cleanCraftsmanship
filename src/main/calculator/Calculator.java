@@ -8,7 +8,7 @@ public class Calculator {
         ArrayList<Integer> primeFactors = new ArrayList<>();
         if (number > 1) {
             if (number % 2 == 0 && number / 2 != 1) {
-                primeFactors.add(number / 2);
+                primeFactors.add(2);
                 number /= 2;
             }
             if (number > 1)
