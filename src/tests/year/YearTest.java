@@ -19,4 +19,10 @@ public class YearTest {
         assertEquals(true, Year.isLeapYear(1996));
     }
 
+    @Test
+    public void shouldReturnTrue_WhenYearDivisiblebyFourHundred() throws Exception {
+        Year year = new Year();
+        assertEquals(true, Year.isLeapYear(1600));
+    }
+
 }
