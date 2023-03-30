@@ -10,7 +10,13 @@ public class YearTest {
     @Test
     public void shouldReturnFalse_WhenYearNotDivisiblebyFour() throws Exception {
         Year year = new Year();
-        assertEquals(false, Year.isLeapYear(1));
+        assertEquals(false, Year.isLeapYear(1997));
+    }
+
+    @Test
+    public void shouldReturnTrue_WhenYearDivisiblebyFour() throws Exception {
+        Year year = new Year();
+        assertEquals(true, Year.isLeapYear(1996));
     }
 
 }
