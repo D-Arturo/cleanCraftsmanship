@@ -1,11 +1,14 @@
 package main.bowlinggame;
 
 public class Game {
-    public void roll(int pins) {
 
+    private int total = 0;
+
+    public void roll(int pins) {
+        total += pins;
     }
 
     public int score() {
-        return 0;
+        return total;
     }
 }
