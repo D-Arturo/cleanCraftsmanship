@@ -47,4 +47,14 @@ public class GameTest {
         rollSame(0, 17);
         assertEquals(16, game.score());
     }
+
+    @Test
+    public void ShouldIdentifyFrame_WhenRollsBelongToDifferentFrames() {
+        game.roll(0);
+        game.roll(5);
+        game.roll(5);
+        game.roll(3);
+        rollSame(0, 16);
+        assertEquals(13, game.score());
+    }
 }
