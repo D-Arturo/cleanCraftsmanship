@@ -38,4 +38,13 @@ public class GameTest {
         rollSame(4, 20);
         assertEquals(80, game.score());
     }
+
+    @Test
+    public void ShouldScoreSixteen_WhenSpareAndThreePinsKnocked() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(3);
+        rollSame(0, 17);
+        assertEquals(16, game.score());
+    }
 }
