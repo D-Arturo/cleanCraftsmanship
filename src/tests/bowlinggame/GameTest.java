@@ -1,6 +1,9 @@
 package tests.bowlinggame;
 
+import main.bowlinggame.Game;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GameTest {
 
@@ -10,6 +13,6 @@ public class GameTest {
         for (int i = 1; i <= 20; i++) {
             game.roll(0);
         }
-        assertEquals(0, game.score(0));
+        assertEquals(0, game.score());
     }
 }
