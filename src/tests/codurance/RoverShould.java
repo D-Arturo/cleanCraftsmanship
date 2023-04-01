@@ -3,6 +3,8 @@ package tests.codurance;
 import main.codurance.Rover;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,9 +18,13 @@ public class RoverShould {
         rover = new Rover();
     }
 
-    @Test
-    public void rotate_right() {
-        assertEquals("0:0:E", rover.execute("R"));
+    @ParameterizedTest
+    @CsvSource({
+            "R, 0:0:E",
+            "RR, 0:0:S"
+    })
+    public void rotate_right(String instructions, String expectedPosition) {
+        assertEquals(expectedPosition, rover.execute(instructions));
     }
 
     @Test
