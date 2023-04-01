@@ -12,7 +12,10 @@ public class Rover {
                 direction = eDirection.value;
 
             }
-            if (c == 'L') direction = rotateLeft();
+            if (c == 'L') {
+                eDirection = eDirection.left();
+                direction = eDirection.value;
+            }
         }
         return "0:0:" + direction;
     }
@@ -51,6 +54,15 @@ public class Rover {
         public Direction right() {
             for (Direction potentialDirection : values()) {
                 if (this.right == potentialDirection.value) {
+                    return potentialDirection;
+                }
+            }
+            return null;
+        }
+
+        public Direction left() {
+            for (Direction potentialDirection : values()) {
+                if (this.left == potentialDirection.value) {
                     return potentialDirection;
                 }
             }
