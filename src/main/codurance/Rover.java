@@ -6,6 +6,7 @@ public class Rover {
 
     public String execute(String commands) {
         for (char c : commands.toCharArray()) {
+            if (direction == "S") direction = "W";
             if (direction == "E") direction = "S";
             if (direction == "N") direction = "E";
         }
