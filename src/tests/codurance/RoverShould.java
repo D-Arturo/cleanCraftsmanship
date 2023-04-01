@@ -46,7 +46,8 @@ public class RoverShould {
     @CsvSource({
             "L, 0:0:W",
             "LL, 0:0:S",
-            "LLL, 0:0:E"
+            "LLL, 0:0:E",
+            "LLLL, 0:0:N"
     })
     public void rotate_left(String instructions, String expectedPosition) {
         assertEquals(expectedPosition, rover.execute(instructions));
