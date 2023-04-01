@@ -25,4 +25,9 @@ public class RoverShould {
     public void rotate_right_two_times() {
         assertEquals("0:0:S", rover.execute("RR"));
     }
+
+    @Test
+    public void rotate_right_three_times() {
+        assertEquals("0:0:W", rover.execute("RRR"));
+    }
 }
