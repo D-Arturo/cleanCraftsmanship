@@ -44,7 +44,8 @@ public class RoverShould {
 
     @ParameterizedTest
     @CsvSource({
-            "L, 0:0:W"
+            "L, 0:0:W",
+            "LL, 0:0:S"
     })
     public void rotate_left(String instructions, String expectedPosition) {
         assertEquals(expectedPosition, rover.execute(instructions));
