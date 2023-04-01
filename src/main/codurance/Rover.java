@@ -14,20 +14,15 @@ public class Rover {
 
     private String rotateLeft() {
         if (direction == "N") return "W";
-        else if (direction == "W") return "S";
-        else if (direction == "S") return "E";
-        else return "N";
+        if (direction == "W") return "S";
+        if (direction == "S") return "E";
+        return "N";
     }
 
     private String rotateRight() {
-        if (direction == "N") {
-            return "E";
-        } else if (direction == "E") {
-            return "S";
-        } else if (direction == "S") {
-            return "W";
-        } else {
-            return "N";
-        }
+        if (direction == "N") return "E";
+        if (direction == "E") return "S";
+        if (direction == "S") return "W";
+        return "N";
     }
 }
