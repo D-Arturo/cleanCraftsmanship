@@ -15,7 +15,8 @@ public class Rover {
     private String rotateLeft() {
         if (direction == "N") return "W";
         else if (direction == "W") return "S";
-        return "E";
+        else if (direction == "S") return "E";
+        else return "N";
     }
 
     private String rotateRight() {
