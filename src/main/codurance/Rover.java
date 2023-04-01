@@ -6,9 +6,15 @@ public class Rover {
 
     public String execute(String commands) {
         for (char c : commands.toCharArray()) {
-            if (direction == "S") direction = "W";
-            if (direction == "E") direction = "S";
-            if (direction == "N") direction = "E";
+            if (direction == "W") {
+                direction = "N";
+            } else if (direction == "S") {
+                direction = "W";
+            } else if (direction == "E") {
+                direction = "S";
+            } else {
+                direction = "E";
+            }
         }
         return "0:0:" + direction;
     }
