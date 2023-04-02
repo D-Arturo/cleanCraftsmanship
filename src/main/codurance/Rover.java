@@ -1,10 +1,11 @@
 package main.codurance;
 
+import static main.codurance.Direction.NORTH;
+
 public class Rover {
 
-    private Direction direction = Direction.NORTH;
-    private final int x = 0;
-    private int y = 0;
+    private Direction direction = NORTH;
+    private Coordinates coordinates = new Coordinates(0, 0);
 
     public String execute(String commands) {
         for (char c : commands.toCharArray()) {
@@ -15,12 +16,18 @@ public class Rover {
                 direction = direction.left();
             }
             if (c == 'M') {
-                if (direction == Direction.NORTH) {
-                    y += 1;
-                }
+                coordinates = move();
             }
         }
-        return "0" + ":" + y + ":" + direction.value();
+        return "0" + ":" + coordinates.y() + ":" + direction.value();
+    }
+
+    private Coordinates move() {
+        int y = coordinates.y();
+        if (direction == NORTH) {
+            y += 1;
+        }
+        return new Coordinates(0, y);
     }
 
 
