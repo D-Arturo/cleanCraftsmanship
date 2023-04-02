@@ -52,4 +52,12 @@ public class RoverShould {
     public void rotate_left(String instructions, String expectedPosition) {
         assertEquals(expectedPosition, rover.execute(instructions));
     }
+
+    @ParameterizedTest
+    @CsvSource({
+            "M, 0:1:N"
+    })
+    public void move_up(String instructions, String expectedPosition) {
+        assertEquals(expectedPosition, rover.execute(instructions));
+    }
 }
