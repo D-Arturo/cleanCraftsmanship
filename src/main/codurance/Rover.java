@@ -16,7 +16,7 @@ public class Rover {
             }
             if (c == 'M') {
                 if (direction == Direction.NORTH) {
-                    y = 1;
+                    y += 1;
                 }
             }
         }
