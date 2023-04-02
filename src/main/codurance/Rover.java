@@ -25,7 +25,7 @@ public class Rover {
     private Coordinates move() {
         int y = coordinates.y();
         if (direction == NORTH) {
-            y += 1;
+            y = (y + 1) % 10;
         }
         return new Coordinates(0, y);
     }
