@@ -1,5 +1,6 @@
 package main.codurance;
 
+import static main.codurance.Direction.EAST;
 import static main.codurance.Direction.NORTH;
 
 public class Rover {
@@ -19,15 +20,19 @@ public class Rover {
                 coordinates = move();
             }
         }
-        return "0" + ":" + coordinates.y() + ":" + direction.value();
+        return coordinates.x() + ":" + coordinates.y() + ":" + direction.value();
     }
 
     private Coordinates move() {
         int y = coordinates.y();
+        int x = coordinates.x();
         if (direction == NORTH) {
             y = (y + 1) % 10;
         }
-        return new Coordinates(0, y);
+        if (direction == EAST) {
+            x = (x + 1);
+        }
+        return new Coordinates(x, y);
     }
 
 

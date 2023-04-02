@@ -13,4 +13,8 @@ public class Coordinates {
     public int y() {
         return y;
     }
+
+    public int x() {
+        return x;
+    }
 }
