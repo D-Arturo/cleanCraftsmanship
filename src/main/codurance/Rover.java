@@ -5,6 +5,8 @@ import static main.codurance.Direction.NORTH;
 
 public class Rover {
 
+    public static final int MAX_HEIGHT = 10;
+    public static final int MAX_WIDTH = 10;
     private Direction direction = NORTH;
     private Coordinates coordinates = new Coordinates(0, 0);
 
@@ -27,10 +29,10 @@ public class Rover {
         int y = coordinates.y();
         int x = coordinates.x();
         if (direction == NORTH) {
-            y = (y + 1) % 10;
+            y = (y + 1) % MAX_HEIGHT;
         }
         if (direction == EAST) {
-            x = (x + 1) % 10;
+            x = (x + 1) % MAX_WIDTH;
         }
         return new Coordinates(x, y);
     }
