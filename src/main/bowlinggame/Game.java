@@ -2,7 +2,7 @@ package main.bowlinggame;
 
 public class Game {
 
-    private int total = 0;
+    private int score = 0;
     private final int[] rolls = new int[21];
     private int currentRoll = 0;
 
@@ -12,14 +12,20 @@ public class Game {
     }
 
     public int score() {
-        for (int i = 0; i < rolls.length; i++) {
-            total += rolls[i];
-            if (i > 1 && i % 2 == 0) {
-                if (rolls[i - 2] + rolls[i - 1] == 10) {
-                    total += rolls[i];
-                }
+        int indexFrame = 0;
+        for (int frame = 0; frame < 10; frame++) {
+            if (isSpare(indexFrame)) {
+                score += rolls[indexFrame] + rolls[indexFrame + 1] + rolls[indexFrame + 2];
+                indexFrame += 2;
+            } else {
+                score += rolls[indexFrame] + rolls[indexFrame + 1];
+                indexFrame += 2;
             }
         }
-        return total;
+        return score;
+    }
+
+    private boolean isSpare(int i) {
+        return rolls[i] + rolls[i + 1] == 10;
     }
 }
